@@ -53,46 +53,115 @@
         <div>⭐ Trusted Platform</div>
     </div>
 
-    <!-- Blog Preview -->
-    <section class="blog-section">
-        <div class="section-header">
-            <h2>Latest from Jasho Blog</h2>
-            <a href="blog.html" class="view-all">View All →</a>
-        </div>
+   <section class="blog-section">
+    <div class="section-header">
+        <h2>Latest from Jasho Blog</h2>
+        <a href="blog.html" class="view-all">View All →</a>
+    </div>
 
-        <div class="blog-container">
-            <div class="card">
-                <img src="images/box-1.jpg" alt="Top earning games">
-                <div class="card-content">
-                    <span class="category">Games</span>
-                    <h3>Top 8 Highest Paying Games on Jasho 2026</h3>
-                    <p>Earn up to ₹800 per day. Full list with real tips.</p>
-                    <a href="top-games.html" class="btn">Read More</a>
-                </div>
-            </div>
+    <div class="blog-container">
 
-            <div class="card">
-                <img src="images/box-2.jpg" alt="Beginner guide">
-                <div class="card-content">
-                    <span class="category">Guide</span>
-                    <h3>Complete Beginner Guide to Start Earning</h3>
-                    <p>Step-by-step guide for new users to earn from Day 1.</p>
-                    <a href="guide.html" class="btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/box-3.jpg" alt="Pro tips">
-                <div class="card-content">
-                    <span class="category">Tips</span>
-                    <h3>Secret Tricks to Earn 5x More Jas Coin</h3>
-                    <p>Pro tips used by top earners.</p>
-                    <a href="tips.html" class="btn">Read More</a>
-                </div>
+        <!-- 1 -->
+        <div class="card">
+            <img src="images/box-1.jpg">
+            <div class="card-content">
+                <span class="category">Games</span>
+                <h3>Top 8 Highest Paying Games on Jasho 2026</h3>
+                <p>Earn up to ₹800 per day.</p>
+                <a href="top-games.html" class="btn">Read More</a>
             </div>
         </div>
-    </section>
 
+        <!-- 2 -->
+        <div class="card">
+            <img src="images/box-2.jpg">
+            <div class="card-content">
+                <span class="category">Guide</span>
+                <h3>Complete Beginner Guide to Start Earning</h3>
+                <p>Step-by-step guide for beginners.</p>
+                <a href="guide.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <img src="images/box-3.jpg">
+            <div class="card-content">
+                <span class="category">Tips</span>
+                <h3>Secret Tricks to Earn 5x More Jas Coin</h3>
+                <p>Boost your earnings fast.</p>
+                <a href="tips.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card">
+            <img src="images/box-4.jpg">
+            <div class="card-content">
+                <span class="category">Apps</span>
+                <h3>Best Apps to Earn Money Online 2026</h3>
+                <p>Top earning apps list.</p>
+                <a href="blog1.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <img src="images/box-5.jpg">
+            <div class="card-content">
+                <span class="category">Ads</span>
+                <h3>Online Earning Through Ads – Complete Guide</h3>
+                <p>Simple earning method.</p>
+                <a href="blog2.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card">
+            <img src="images/box-6.jpg">
+            <div class="card-content">
+                <span class="category">Apps</span>
+                <h3>Top 5 Legit Earning Apps</h3>
+                <p>Trusted earning apps.</p>
+                <a href="blog3.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card">
+            <img src="images/box-7.jpg">
+            <div class="card-content">
+                <span class="category">Review</span>
+                <h3>Jasho App Real or Fake?</h3>
+                <p>Full honest review.</p>
+                <a href="blog4.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card">
+            <img src="images/box-8.jpg">
+            <div class="card-content">
+                <span class="category">Guide</span>
+                <h3>Convert Jas Coin into Real Money</h3>
+                <p>Step-by-step withdraw guide.</p>
+                <a href="blog5.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card">
+            <img src="images/box-9.jpg">
+            <div class="card-content">
+                <span class="category">Tips</span>
+                <h3>Earn More Jas Coin Fast</h3>
+                <p>Secret earning tricks.</p>
+                <a href="blog6.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
     <footer>
         <div class="footer-container">
             <p>© 2026 Jasho • All Rights Reserved</p>
@@ -105,5 +174,36 @@
         </div>
     </footer>
 <script type="module" src="script.js"></script>
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+
+import { 
+  getFirestore, 
+  doc, 
+  getDoc, 
+  setDoc 
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCe9eJBO5rz3A6yX1H-L8Cs5pLwuwJt04Q",
+  authDomain: "jasho-5e2bc.firebaseapp.com",
+  projectId: "jasho-5e2bc"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 👁️ Count visits
+const ref = doc(db, "stats", "visits");
+const snap = await getDoc(ref);
+
+if (snap.exists()) {
+  await setDoc(ref, { count: snap.data().count + 1 });
+} else {
+  await setDoc(ref, { count: 1 });
+}
+
+</script>
 </body>
 </html>

@@ -131,34 +131,6 @@ window.resetPassword = async function () {
 };
 
 
-// ================= FETCH USERS (ADMIN) =================
-window.loadUsers = async function () {
-  const tableBody = document.getElementById("userTable");
-
-  if (!tableBody) return;
-
-  tableBody.innerHTML = "Loading...";
-
-  const querySnapshot = await getDocs(collection(db, "users"));
-
-  let html = "";
-
-  querySnapshot.forEach((docSnap) => {
-    const data = docSnap.data();
-
-    html += `
-      <tr>
-        <td>${data.name}</td>
-        <td>${data.email}</td>
-        <td>${data.coins}</td>
-      </tr>
-    `;
-  });
-
-  tableBody.innerHTML = html;
-};
-
-
 
 
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
