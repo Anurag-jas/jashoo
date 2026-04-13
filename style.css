@@ -61,12 +61,28 @@ nav a {
     border-radius: 50px;
     font-weight: 600;
 }
-
+/* 🔥 Offer Banner */
+.offer-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 /* ==================== HERO ==================== */
 .hero {
-    position: relative;
-    height: 360px;
-    overflow: hidden;
+  height: 90vh;
+  background: url('images/hero.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .hero-img {
@@ -83,15 +99,11 @@ nav a {
     background: linear-gradient(180deg, rgba(12,19,36,0.4), rgba(12,19,36,0.9));
 }
 
+
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    width: 90%;
-    max-width: 680px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .hero h2 {
@@ -108,14 +120,14 @@ nav a {
 }
 
 .hero-btn {
-    background: linear-gradient(90deg, #e2e8f0, #cbd5e1);
-    color: #0f172a;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 14px 36px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 8px 25px rgba(226, 232, 240, 0.4);
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .hero-stats {
