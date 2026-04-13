@@ -163,20 +163,24 @@ window.loadUsers = async function () {
 
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-// 🔥 Check login state
+// 🔥 Auth UI
 onAuthStateChanged(auth, (user) => {
   const authArea = document.getElementById("authArea");
 
   if (!authArea) return;
 
   if (user) {
-    // ✅ Logged in UI
     authArea.innerHTML = `
-      <span style="margin-right:10px;">👤 ${user.email}</span>
-      <button onclick="logout()" style="padding:6px 10px;">Logout</button>
+      <div class="profile-box" onclick="toggleProfile()">
+        <span class="profile-icon">👤</span>
+
+        <div class="profile-dropdown">
+          <p>${user.email}</p>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </div>
     `;
   } else {
-    // ❌ Not logged in
     authArea.innerHTML = `<a href="login.html">Login</a>`;
   }
 });
@@ -185,4 +189,15 @@ onAuthStateChanged(auth, (user) => {
 window.logout = async function () {
   await signOut(auth);
   location.reload();
+};
+
+// 👤 Toggle dropdown
+window.toggleProfile = function () {
+  const box = document.querySelector(".profile-box");
+  box.classList.toggle("active");
+};
+// 🍔 Toggle Menu
+window.toggleMenu = function () {
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("active");
 };
