@@ -1,19 +1,19 @@
 // 🔥 Firebase Imports
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 
 import { 
   getAuth, 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
-  sendPasswordResetEmail 
+  sendPasswordResetEmail,
+  onAuthStateChanged, 
+  signOut 
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 import { 
   getFirestore, 
   setDoc, 
-  doc, 
-  collection, 
-  getDocs 
+  doc
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 
@@ -28,8 +28,12 @@ const firebaseConfig = {
   measurementId: "G-KLC0T97KFV"
 };
 
-// 🚀 Initialize Firebase
-const app = initializeApp(firebaseConfig);
+
+// ✅ FIXED Firebase Init (No duplicate error)
+const app = !getApps().length 
+  ? initializeApp(firebaseConfig) 
+  : getApp();
+
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -56,26 +60,25 @@ window.signup = async function () {
   }
 
   try {
-    // 🔥 Signup
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
+    // 🔥 Default coins = 180
     await setDoc(doc(db, "users", userCredential.user.uid), {
       name: name,
       email: email,
-      coins: 0
+      coins: 180,
+      createdAt: new Date()
     });
 
     msg.style.color = "#22c55e";
     msg.innerText = "🎉 Account Registered Successfully!";
 
-    // 👉 Redirect to HOME
     setTimeout(() => {
-      window.location.href = "index.html"; // 👈 home page
+      window.location.href = "index.html";
     }, 1500);
 
   } catch (error) {
 
-    // 🔥 अगर email already use है → login कर दो
     if (error.code === "auth/email-already-in-use") {
 
       msg.style.color = "orange";
@@ -85,7 +88,7 @@ window.signup = async function () {
         await signInWithEmailAndPassword(auth, email, password);
 
         setTimeout(() => {
-          window.location.href = "index.html"; // 👈 home
+          window.location.href = "index.html";
         }, 1000);
 
       } catch (err) {
@@ -99,6 +102,7 @@ window.signup = async function () {
     }
   }
 };
+
 
 // ================= LOGIN =================
 window.login = async function () {
@@ -131,11 +135,7 @@ window.resetPassword = async function () {
 };
 
 
-
-
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-// 🔥 Auth UI
+// ================= AUTH UI =================
 onAuthStateChanged(auth, (user) => {
   const authArea = document.getElementById("authArea");
 
@@ -157,17 +157,21 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+
 // 🔓 Logout
 window.logout = async function () {
   await signOut(auth);
   location.reload();
 };
 
-// 👤 Toggle dropdown
+
+// 👤 Toggle Profile
 window.toggleProfile = function () {
   const box = document.querySelector(".profile-box");
   box.classList.toggle("active");
 };
+
+
 // 🍔 Toggle Menu
 window.toggleMenu = function () {
   const nav = document.getElementById("navMenu");
