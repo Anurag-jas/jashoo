@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,4 +133,140 @@ button:hover {
 </div>
 <script type="module" src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Jasho</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0c1324);
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 🔐 Login Box */
+.box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 35px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* Extra Links */
+.links {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: white;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Phone Button */
+.phone-btn {
+  background: #22c55e;
+}
+
+/* 📱 Mobile */
+@media(max-width:400px){
+  .box {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Login to Jasho</h2>
+
+<!-- Email Login -->
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+<div class="links">
+  <a href="forget-password.html">Forgot Password?</a>
+</div>
+
+<div class="divider">OR</div>
+
+<!-- Phone Login -->
+<button class="phone-btn" onclick="alert('Coming Soon 🚀')">
+  Continue with Phone
+</button>
+<div class="links">
+  <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+
+</div>
+<script type="module" src="script.js"></script>
+</body>
+>>>>>>> a58baee27be276bd6ccaa07f6077737f7940a3a7
 </html>
