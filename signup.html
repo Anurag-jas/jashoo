@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - Jasho</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0c1324);
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Box */
+.box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 35px;
+  border-radius: 16px;
+  width: 340px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+/* Input Wrapper */
+.input-box {
+  position: relative;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+
+/* Eye Button */
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 22px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Success Message */
+.success {
+  margin-top: 10px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.checkbox input {
+  width: auto;
+  margin-right: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Create Account</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email Address">
+
+<div class="input-box">
+  <input type="password" id="password" placeholder="Create Password">
+  <span class="eye" onclick="togglePassword('password')">👁️</span>
+</div>
+
+<div class="input-box">
+  <input type="password" id="confirmPassword" placeholder="Confirm Password">
+  <span class="eye" onclick="togglePassword('confirmPassword')">👁️</span>
+</div>
+
+<div class="checkbox">
+  <input type="checkbox" id="terms">
+  <label>I agree to Terms & Privacy Policy</label>
+</div>
+
+<button onclick="signup()">Sign Up</button>
+
+<div id="msg" class="success"></div>
+
+</div>
+
+<!-- Script -->
+<script type="module" src="script.js"></script>
+
+<script>
+// 👁️ Toggle Password
+function togglePassword(id) {
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
