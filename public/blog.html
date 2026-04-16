@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasho Earn Blog</title>
+<title>Jasho Blog</title>
 
 <style>
 body {
@@ -13,20 +13,14 @@ body {
   color: #e2e8f0;
 }
 
-/* 🔝 Header */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px 20px;
-  background: rgba(12,19,36,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: #0c1324;
 }
 
-.header h1 {
-  color: gold;
-}
+.header h1 { color: gold; }
 
 .header a {
   color: #cbd5e1;
@@ -34,149 +28,201 @@ body {
   text-decoration: none;
 }
 
-/* 🎯 Hero */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #7c3aed, #6366f1);
-}
-
-.hero h1 {
-  color: #facc15;
-  font-size: 32px;
-}
-
-.hero p {
-  margin-top: 10px;
-  color: #e0e7ff;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: white;
-  color: #0f172a;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* 📦 Sections */
 .section {
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 0 20px;
 }
 
-.section h2 {
-  margin-bottom: 15px;
-  color: #e2e8f0;
-}
-
-/* 🧾 Cards */
-.card {
-  background: #1e2937;
-  padding: 18px;
-  margin: 12px 0;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* 🎮 Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 15px;
 }
 
-/* 🔻 Footer */
+.card {
+  background: #1e2937;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: gold;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
-  color: #94a3b8;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* 📱 Mobile */
-@media(max-width:600px){
-  .hero h1 {
-    font-size: 24px;
-  }
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- 🔝 Header -->
 <div class="header">
-  <h1>Jasho</h1>
+  <h1>Jasho Blog</h1>
   <div>
     <a href="index.html">Home</a>
     <a href="earn.html">Earn</a>
-    <a href="blog.html">Blog</a>
   </div>
 </div>
 
-<!-- 🎯 Hero -->
-<div class="hero">
-  <h1>Earn Money with Jasho 💰</h1>
-  <p>Play games & earn Jas Coin daily</p>
-  <button>Start Earning</button>
+<!-- 🔥 TOP AD -->
+<div style="text-align:center; margin:20px 0;">
+<script>
+atOptions = {
+'key' : '64c0418f2a37cff05293b1ba54862b3e',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728
+};
+</script>
+<script src="https://www.highperformanceformat.com/64c0418f2a37cff05293b1ba54862b3e/invoke.js"></script>
 </div>
 
-<!-- 💡 About -->
 <div class="section">
-  <h2>What is Jasho?</h2>
-  <div class="card">
-    <p>Jasho ek earning app hai jaha tum games khel kar, ads dekh kar aur tasks complete karke Jas Coin kama sakte ho.</p>
-  </div>
+<h2>Latest Blogs</h2>
+
+<div class="grid">
+
+<!-- BLOG CARD 1 -->
+<div class="card">
+<img src="images/box-1.jpg">
+<div class="card-content">
+<h3>Top 8 Highest Paying Games</h3>
+<a href="top-games.html" class="btn">Read</a>
+</div>
 </div>
 
-<!-- 🎮 Games -->
-<div class="section">
-  <h2>Games Available</h2>
-  <div class="grid">
-    <div class="card">🎮 Tap Game – Fast earning</div>
-    <div class="card">🎡 Spin Wheel – Luck based reward</div>
-    <div class="card">🧩 Puzzle Game – Skill earning</div>
-  </div>
+<!-- BLOG CARD 2 -->
+<div class="card">
+<img src="images/box-2.jpg">
+<div class="card-content">
+<h3>Beginner Guide</h3>
+<a href="guide.html" class="btn">Read</a>
+</div>
 </div>
 
-<!-- 💰 Earnings -->
-<div class="section">
-  <h2>How Much You Can Earn?</h2>
-  <div class="card">
-    <p>Daily ₹50–₹500 earn possible based on activity.</p>
-  </div>
+<!-- BLOG CARD 3 -->
+<div class="card">
+<img src="images/box-3.jpg">
+<div class="card-content">
+<h3>Earn More Jas Coin</h3>
+<a href="tips.html" class="btn">Read</a>
+</div>
 </div>
 
-<!-- 👥 Referral -->
-<div class="section">
-  <h2>Referral System</h2>
-  <div class="card">
-    <p>Har friend invite par bonus milega + unke earning ka % milega.</p>
-  </div>
+<!-- 🔥 CENTER AD -->
+<div style="grid-column:1/-1; text-align:center; margin:20px 0;">
+<script>
+atOptions = {
+'key' : '6dc37490e5bc00c1a8e39fa93254d53a',
+'format' : 'iframe',
+'height' : 250,
+'width' : 300
+};
+</script>
+<script src="https://www.highperformanceformat.com/6dc37490e5bc00c1a8e39fa93254d53a/invoke.js"></script>
 </div>
 
-<!-- 🚀 Future -->
-<div class="section">
-  <h2>Future Plans</h2>
-  <div class="card">
-    <p>UPI withdrawal, leaderboard, daily bonus system coming soon.</p>
-  </div>
+<!-- BLOG CARD 4 -->
+<div class="card">
+<img src="images/box-4.jpg">
+<div class="card-content">
+<h3>Best Earning Apps</h3>
+<a href="blog1.html" class="btn">Read</a>
+</div>
 </div>
 
-<!-- 🔻 Footer -->
+<!-- BLOG CARD 5 -->
+<div class="card">
+<img src="images/box-5.jpg">
+<div class="card-content">
+<h3>Ads Earning Guide</h3>
+<a href="blog2.html" class="btn">Read</a>
+</div>
+</div>
+
+<!-- BLOG CARD 6 -->
+<div class="card">
+<img src="images/box-6.jpg">
+<div class="card-content">
+<h3>Top Legit Apps</h3>
+<a href="blog3.html" class="btn">Read</a>
+</div>
+</div>
+
+<!-- BLOG CARD 7 -->
+<div class="card">
+<img src="images/box-7.jpg">
+<div class="card-content">
+<h3>Jasho Real or Fake</h3>
+<a href="blog4.html" class="btn">Read</a>
+</div>
+</div>
+
+<!-- BLOG CARD 8 -->
+<div class="card">
+<img src="images/box-8.jpg">
+<div class="card-content">
+<h3>Withdraw Guide</h3>
+<a href="blog5.html" class="btn">Read</a>
+</div>
+</div>
+
+<!-- BLOG CARD 9 -->
+<div class="card">
+<img src="images/box-9.jpg">
+<div class="card-content">
+<h3>Fast Earning Tricks</h3>
+<a href="blog6.html" class="btn">Read</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- 🔥 NATIVE AD -->
+<div style="margin:20px;">
+<script async data-cfasync="false" src="https://pl29165528.profitablecpmratenetwork.com/ae58d433641cca281e68c8b2b81b5429/invoke.js"></script>
+<div id="container-ae58d433641cca281e68c8b2b81b5429"></div>
+</div>
+
+<!-- 🔥 BOTTOM AD -->
+<div style="text-align:center;">
+<script>
+atOptions = {
+'key' : '4123d5422877d40d291ab625fd7655ba',
+'format' : 'iframe',
+'height' : 50,
+'width' : 320
+};
+</script>
+<script src="https://www.highperformanceformat.com/4123d5422877d40d291ab625fd7655ba/invoke.js"></script>
+</div>
+
 <footer>
-  © 2026 Jasho
+© 2026 Jasho
 </footer>
 
 </body>
